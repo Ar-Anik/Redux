@@ -14,7 +14,7 @@ const addbook = (id, from, to, date, guests, clss) => {
   };
 };
 
-const deletebook = ({ id }) => {
+const deletebook = (id) => {
   return {
     type: DELETE,
     payload: {

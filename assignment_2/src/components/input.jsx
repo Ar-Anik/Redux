@@ -15,7 +15,6 @@ const InputData = () => {
   const [clss, setClss] = useState("Please Select");
 
   const books = useSelector((state) => state.books);
-  console.log(books);
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
