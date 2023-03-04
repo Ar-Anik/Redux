@@ -3,7 +3,6 @@ import { deletebook } from "../redux/books/actions";
 
 const ShowData = () => {
   const books = useSelector((state) => state.books);
-  console.log("fucking Book : ", books);
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
@@ -25,7 +24,7 @@ const ShowData = () => {
         </thead>
         <tbody className="divide-y divide-gray-300/20" id="lws-previewBooked">
           {books &&
-            books.map((book) => {
+            books?.map((book) => {
               const { id, from, to, date, guest, clss } = book;
 
               return (

@@ -32,11 +32,11 @@ const InputData = () => {
     } else {
       if (books.length === 0) {
         let id = 1;
-        dispatch(addbook({ id, from, to, date, guest, clss }));
+        dispatch(addbook(id, from, to, date, guest, clss));
       } else {
         let book = books[books.length - 1];
         let id = book.id + 1;
-        dispatch(addbook({ id, from, to, date, guest, clss }));
+        dispatch(addbook(id, from, to, date, guest, clss));
       }
     }
   };

@@ -1,6 +1,6 @@
 import { DELETE, ADD } from "./actionTypes";
 
-const addbook = (id, from, to, date, guests, cls) => {
+const addbook = (id, from, to, date, guests, clss) => {
   return {
     type: ADD,
     payload: {
@@ -9,7 +9,7 @@ const addbook = (id, from, to, date, guests, cls) => {
       To: to,
       Date: date,
       Guests: guests,
-      Clss: cls,
+      Clss: clss,
     },
   };
 };
