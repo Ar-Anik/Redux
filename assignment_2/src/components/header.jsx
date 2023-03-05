@@ -9,14 +9,10 @@ const Header = () => {
         <div className="flex items-center">
           <NavLink
             className={["text-white min-w-[50px]", "font-medium"].join(" ")}
-            to="facebook.com"
+            to="/"
           >
             Home
           </NavLink>
-          {/* <a className="text-white min-w-[50px] font-medium" href="#">
-          {[styles.coloredLine, 'border', 'shadow'].join(' ')}
-            Home
-          </a> */}
           <button className="log-btn btn">Login</button>
         </div>
       </div>

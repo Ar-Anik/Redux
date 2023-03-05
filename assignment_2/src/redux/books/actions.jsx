@@ -4,12 +4,12 @@ const addbook = (id, from, to, date, guests, clss) => {
   return {
     type: ADD,
     payload: {
-      ID: id,
-      From: from,
-      To: to,
-      Date: date,
-      Guests: guests,
-      Clss: clss,
+      id: id,
+      from: from,
+      to: to,
+      date: date,
+      guest: guests,
+      clss: clss,
     },
   };
 };

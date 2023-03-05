@@ -33,9 +33,13 @@ const InputData = () => {
         let id = 1;
         dispatch(addbook(id, from, to, date, guest, clss));
       } else {
-        let book = books[books.length - 1];
-        let id = book.id + 1;
-        dispatch(addbook(id, from, to, date, guest, clss));
+        if (books.length === 3) {
+          alert("you already add 3 book");
+        } else {
+          let book = books[books.length - 1];
+          let id = book.id + 1;
+          dispatch(addbook(id, from, to, date, guest, clss));
+        }
       }
     }
   };

@@ -4,17 +4,18 @@ const initialState = {
   books: [],
 };
 
-const BookReducer = (state = initialState, actions) => {
-  switch (actions.type) {
+const BookReducer = (state = initialState, action) => {
+  console.log(action.payload);
+  switch (action.type) {
     case ADD:
       return {
         ...state,
-        books: state.books.push(actions.payload),
+        books: [...state.books, action.payload],
       };
     case DELETE:
       return {
         ...state,
-        books: state.books.filter((book) => book.id !== actions.payload.id),
+        books: state.books.filter((book) => book.id !== action.payload.id),
       };
     default:
       return state;

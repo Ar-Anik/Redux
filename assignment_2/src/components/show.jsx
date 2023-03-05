@@ -25,32 +25,32 @@ const ShowData = () => {
         <tbody className="divide-y divide-gray-300/20" id="lws-previewBooked">
           {books &&
             books?.map((book) => {
-              const { ID, From, To, Date, Guest, Clss } = book;
+              const { id, from, to, date, guest, clss } = book;
 
               return (
-                <tr className="lws-bookedTable text-black" key={ID}>
+                <tr className="lws-bookedTable text-black" key={id}>
                   <td className="px-6 py-4">
                     <div className="flex items-center space-x-3">
-                      <p className="lws-bookedFrom">{From}</p>
+                      <p className="lws-bookedFrom">{from}</p>
                     </div>
                   </td>
                   <td className="px-6 py-4">
-                    <p className="lws-bookedTo">{To}</p>
+                    <p className="lws-bookedTo">{to}</p>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <p className="lws-bookedDate">{Date}</p>
+                    <p className="lws-bookedDate">{date}</p>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <p className="lws-bookedGustes">{Guest}</p>
+                    <p className="lws-bookedGustes">{guest}</p>
                   </td>
                   <td className="px-6 py-4 text-center">
-                    <span className="lws-bookedClass"> {Clss} </span>
+                    <span className="lws-bookedClass"> {clss} </span>
                   </td>
                   <td className="px-6 py-4 text-center">
                     <div className="flex justify-center gap-4">
                       <button
                         className="lws-remove"
-                        onClick={() => handleDelete(ID)}
+                        onClick={() => handleDelete(id)}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
