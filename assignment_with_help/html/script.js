@@ -123,7 +123,7 @@ const render = () => {
           <h3 class="lws-matchName">Match ${item.id}</h3>
         </div>
         <div class="inc-dec">
-          <form class="incrementForm" onsubmit="event.preventDefault(); incrementHandler(${item.id}, ${this})">
+          <form class="incrementForm" onsubmit="event.preventDefault(); incrementHandler(${item.id}, this)">
             <h4>Increment</h4>
             <input type="number" name="increment" class="lws-increment" id="input1"/>
           </form>
