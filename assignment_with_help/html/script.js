@@ -7,6 +7,7 @@ const ADDMATCH = "match/add";
 const INCREMENT = "count/increment";
 const DECREMENT = "count/decrement";
 const RESET = "count/reset";
+const DELETEITEM = "match/delete";
 
 // actionCreator
 const addMatch = () => {
@@ -16,6 +17,7 @@ const addMatch = () => {
 };
 
 const increment = ({ id, value }) => {
+  console.log("increment action creator : ", id, value);
   return {
     type: INCREMENT,
     payload: {
@@ -35,26 +37,37 @@ const decrement = ({ id, value }) => {
   };
 };
 
+const deletes = (id) => {
+  return {
+    type: DELETEITEM,
+    payload: {
+      id: id,
+    },
+  };
+};
+
 const reset = () => {
   return {
     type: RESET,
   };
 };
 
-const incrementHandler = ({ id, formel }) => {
-  console.log(formel);
-  console.log(id);
+const incrementHandler = (id, formel) => {
   const input = formel.querySelector("#input1");
   const value = Number(input.value);
 
   store.dispatch(increment({ id, value }));
 };
 
-const decrementHandler = ({ id, formel }) => {
+const decrementHandler = (id, formel) => {
   const input = formel.querySelector("#input2");
   const value = Number(input.value);
 
-  store.dispatch(increment({ id, value }));
+  store.dispatch(decrement({ id, value }));
+};
+
+const deleteHandler = (id) => {
+  store.dispatch(deletes(id));
 };
 
 const initialState = [
@@ -71,7 +84,7 @@ const counterReduer = (state = initialState, action) => {
       if (element.id === action.payload.id) {
         return {
           ...element,
-          score: element.score + action.payload.score,
+          score: element.score + action.payload.value,
         };
       } else {
         return element;
@@ -82,16 +95,18 @@ const counterReduer = (state = initialState, action) => {
   } else if (action.type === DECREMENT) {
     const newState = state.map((element) => {
       if (element.id === action.payload.id) {
-        const newValue = element.score - action.payload.score;
+        const newValue = element.score - action.payload.value;
 
         return {
           ...element,
-          score: element.score + action.payload.score,
+          score: newValue >= 0 ? newValue : 0,
         };
       } else {
         return element;
       }
     });
+
+    return newState;
   } else if (action.type === RESET) {
     const newState = state.map((element) => {
       return {
@@ -99,9 +114,18 @@ const counterReduer = (state = initialState, action) => {
         score: 0,
       };
     });
+    return newState;
   } else if (action.type === ADDMATCH) {
     newState = state[state.length - 1];
     return [...state, { id: newState.id + 1, score: 0 }];
+  } else if (action.type === DELETEITEM) {
+    const newState = state.map((element) => {
+      if (element.id !== action.payload.id) {
+        return element;
+      }
+    });
+
+    return newState;
   } else {
     return state;
   }
@@ -117,7 +141,7 @@ const render = () => {
       return `
         <div class="match">
         <div class="wrapper">
-          <button class="lws-delete">
+          <button class="lws-delete" onclick="deleteHandler(${item.id})">
             <img src="./image/delete.svg" alt="" />
           </button>
           <h3 class="lws-matchName">Match ${item.id}</h3>
