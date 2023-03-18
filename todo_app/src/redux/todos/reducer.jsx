@@ -3,7 +3,7 @@ import {
   CLEARCOMPLETED,
   COLORSELECTED,
   DELETED,
-  TOGGLE,
+  TOGGLED,
   ADDED,
 } from "./actionTypes";
 
@@ -21,7 +21,7 @@ const todoReducer = (state = InitialState, action) => {
           complete: false,
         },
       ];
-    case TOGGLE:
+    case TOGGLED:
       const toggleState = state.map((todo) => {
         if (todo.id === action.payload) {
           return {
@@ -36,9 +36,10 @@ const todoReducer = (state = InitialState, action) => {
       return toggleState;
 
     case COLORSELECTED:
-      const { id, color } = action.payload;
+      const { todoId, color } = action.payload;
+
       const seletedState = state.map((todo) => {
-        if (todo.id === id) {
+        if (todo.id === todoId) {
           return {
             ...todo,
             color: color,

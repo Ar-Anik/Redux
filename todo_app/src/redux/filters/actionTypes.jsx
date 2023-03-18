@@ -8,6 +8,7 @@ const statusChange = (status) => {
 };
 
 const colorChange = (color, changeType) => {
+  console.log(color, changeType);
   return {
     type: COLORCHANGED,
     payload: { color, changeType },

@@ -1,6 +1,6 @@
 import {
   ADDED,
-  TOGGLE,
+  TOGGLED,
   COLORSELECTED,
   DELETED,
   CLEARCOMPLETED,
@@ -14,24 +14,27 @@ const added = (todoText) => {
   };
 };
 
-const toogle = (id) => {
+const toogled = (todoId) => {
   return {
-    type: TOGGLE,
-    payload: id,
+    type: TOGGLED,
+    payload: todoId,
   };
 };
 
-const colorSelected = (id, color) => {
+const colorSelected = (todoId, color) => {
   return {
     type: COLORSELECTED,
-    payload: { id, color },
+    payload: {
+      todoId,
+      color,
+    },
   };
 };
 
-const deleted = (id) => {
+const deleted = (todoId) => {
   return {
     type: DELETED,
-    payload: id,
+    payload: todoId,
   };
 };
 
@@ -47,4 +50,4 @@ const allcompleted = () => {
   };
 };
 
-export { added, toogle, colorSelected, deleted, clearcompleted, allcompleted };
+export { added, toogled, colorSelected, deleted, clearcompleted, allcompleted };

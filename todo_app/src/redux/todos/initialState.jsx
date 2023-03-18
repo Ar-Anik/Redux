@@ -1,4 +1,4 @@
-const InitialState = () => [
+const InitialState = [
   {
     id: 1,
     text: "Learn Fast-API",
