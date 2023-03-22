@@ -1,7 +1,6 @@
 import "./style/App.css";
 import Navbar from "./components/navbar";
-import ProductContainer from "./components/product/productContainer";
-import ProductInput from "./components/product/productInput";
+import Product from "./components/product/Product";
 import Cart from "./components/cart/cart";
 
 function App() {
@@ -9,12 +8,7 @@ function App() {
     <>
       <Navbar />
 
-      {/* <main className="py-16">
-        <div className="productWrapper">
-          <ProductContainer />
-          <ProductInput />
-        </div>
-      </main> */}
+      <Product />
 
       <Cart />
     </>
