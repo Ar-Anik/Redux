@@ -1,3 +1,5 @@
+const PRODUCTADDED = "product/added";
 const PRODUCTADD = "product/add";
+const PRODUCTSUB = "product/sub";
 
-export default PRODUCTADD;
+export { PRODUCTADDED, PRODUCTADD, PRODUCTSUB };

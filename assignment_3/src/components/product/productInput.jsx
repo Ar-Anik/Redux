@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import productAdd from "../../redux/product/actions";
+import { productAdded } from "../../redux/product/actions";
 
 const ProductInput = () => {
   const [name, setName] = useState("");
@@ -12,7 +12,7 @@ const ProductInput = () => {
   const dispatch = useDispatch();
 
   const handleForm = (productName, category, imgUrl, price, quantity) => {
-    dispatch(productAdd(productName, category, imgUrl, price, quantity));
+    dispatch(productAdded(productName, category, imgUrl, price, quantity));
   };
 
   return (

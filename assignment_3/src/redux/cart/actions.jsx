@@ -1,7 +1,6 @@
 import { ADDED, ADD, SUB, DELETED } from "./actionTypes";
 
 const added = (id, name, category, imageUrl, price, quantity) => {
-  console.log("added: ", id, name, category, imageUrl, price, quantity);
   return {
     type: ADDED,
     payload: {
@@ -9,8 +8,8 @@ const added = (id, name, category, imageUrl, price, quantity) => {
       name: name,
       category: category,
       imageUrl: imageUrl,
-      price: price,
-      quantity: quantity,
+      price: Number(price),
+      quantity: Number(quantity),
     },
   };
 };

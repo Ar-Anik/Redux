@@ -1,12 +1,16 @@
 import { useDispatch } from "react-redux";
 import { added } from "../../redux/cart/actions";
+import { productSub } from "../../redux/product/actions";
 
 const ProductItem = (product) => {
   const { id, name, category, imageUrl, price, quantity } = product.product;
   const dispatch = useDispatch();
 
   const handleAdd = (id, name, category, imageUrl, price, quantity) => {
-    dispatch(added(id, name, category, imageUrl, price, quantity));
+    if (quantity > 0) {
+      dispatch(added(id, name, category, imageUrl, price, quantity));
+      dispatch(productSub(id));
+    }
   };
 
   return (

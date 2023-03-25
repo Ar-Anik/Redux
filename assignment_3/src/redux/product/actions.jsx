@@ -1,8 +1,8 @@
-import PRODUCTADD from "./actionType";
+import { PRODUCTADDED, PRODUCTADD, PRODUCTSUB } from "./actionType";
 
-const productAdd = (productName, category, imgUrl, price, quantity) => {
+const productAdded = (productName, category, imgUrl, price, quantity) => {
   return {
-    type: PRODUCTADD,
+    type: PRODUCTADDED,
     payload: {
       productName,
       category,
@@ -13,4 +13,18 @@ const productAdd = (productName, category, imgUrl, price, quantity) => {
   };
 };
 
-export default productAdd;
+const productAdd = (id) => {
+  return {
+    type: PRODUCTADD,
+    payload: id,
+  };
+};
+
+const productSub = (id) => {
+  return {
+    type: PRODUCTSUB,
+    payload: id,
+  };
+};
+
+export { productAdded, productAdd, productSub };

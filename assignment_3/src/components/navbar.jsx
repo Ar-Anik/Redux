@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+import TotalProduct from "./totalProducts";
 
 const Navbar = () => {
+  const total = TotalProduct();
+
   return (
     <nav className="bg-[#171C2A] py-4">
       <div className="navBar">
@@ -16,7 +19,7 @@ const Navbar = () => {
 
           <Link to="/cart" className="navCart" id="lws-cart">
             <i className="text-xl fa-sharp fa-solid fa-bag-shopping" />
-            <span id="lws-totalCart">0</span>
+            <span id="lws-totalCart">{total}</span>
           </Link>
         </div>
       </div>
