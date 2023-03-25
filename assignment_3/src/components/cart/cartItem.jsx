@@ -1,40 +1,62 @@
-const CartItem = () => {
+import { useDispatch } from "react-redux";
+import { add, sub, deleted } from "../../redux/cart/actions";
+
+const CartItem = (cart) => {
+  const { id, name, category, imageUrl, price, quantity, total } = cart.cart;
+
+  const dispatch = useDispatch();
+
+  const handleAdd = (id) => {
+    dispatch(add(id));
+  };
+
+  const handleSub = (id) => {
+    dispatch(sub(id));
+  };
+
+  const handleDeleted = (id) => {
+    dispatch(deleted(id));
+  };
+
   return (
-    <div class="space-y-6">
-      <div class="cartCard">
-        <div class="flex items-center col-span-6 space-x-6">
-          <img
-            class="lws-cartImage"
-            src="https://i.dummyjson.com/data/products/40/thumbnail.jpg"
-            alt="product"
-          />
-          <div class="space-y-2">
-            <h4 class="lws-cartName">
-              Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptop
-            </h4>
-            <p class="lws-cartCategory">Men's clothing</p>
+    <div className="space-y-6">
+      <div className="cartCard">
+        <div className="flex items-center col-span-6 space-x-6">
+          <img className="lws-cartImage" src={imageUrl} alt="product" />
+          <div className="space-y-2">
+            <h4 className="lws-cartName">{name}</h4>
+            <p className="lws-cartCategory">{category}</p>
             <p>
-              BDT <span class="lws-cartPrice">1100</span>
+              BDT <span className="lws-cartPrice">{price}</span>
             </p>
           </div>
         </div>
-        <div class="flex items-center justify-center col-span-4 mt-4 space-x-8 md:mt-0">
-          <div class="flex items-center space-x-4">
-            <button class="lws-incrementQuantity">
-              <i class="text-lg fa-solid fa-plus"></i>
+        <div className="flex items-center justify-center col-span-4 mt-4 space-x-8 md:mt-0">
+          <div className="flex items-center space-x-4">
+            <button
+              className="lws-incrementQuantity"
+              onClick={() => handleAdd(id)}
+            >
+              <i className="text-lg fa-solid fa-plus"></i>
             </button>
-            <span class="lws-cartQuantity">2</span>
-            <button class="lws-decrementQuantity">
-              <i class="text-lg fa-solid fa-minus"></i>
+            <span className="lws-cartQuantity">{quantity}</span>
+            <button
+              className="lws-decrementQuantity"
+              onClick={() => handleSub(id)}
+            >
+              <i className="text-lg fa-solid fa-minus"></i>
             </button>
           </div>
-          <p class="text-lg font-bold">
-            BDT <span class="lws-calculatedPrice">2200</span>
+          <p className="text-lg font-bold">
+            BDT <span className="lws-calculatedPrice">{total}</span>
           </p>
         </div>
-        <div class="flex items-center justify-center col-span-2 mt-4 md:justify-end md:mt-0">
-          <button class="lws-removeFromCart">
-            <i class="text-lg text-red-400 fa-solid fa-trash"></i>
+        <div className="flex items-center justify-center col-span-2 mt-4 md:justify-end md:mt-0">
+          <button
+            className="lws-removeFromCart"
+            onClick={() => handleDeleted(id)}
+          >
+            <i className="text-lg text-red-400 fa-solid fa-trash"></i>
           </button>
         </div>
       </div>

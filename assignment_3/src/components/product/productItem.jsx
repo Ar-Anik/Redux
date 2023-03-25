@@ -1,23 +1,36 @@
-const ProductItem = () => {
+import { useDispatch } from "react-redux";
+import { added } from "../../redux/cart/actions";
+
+const ProductItem = (product) => {
+  const { id, name, category, imageUrl, price, quantity } = product.product;
+  const dispatch = useDispatch();
+
+  const handleAdd = (id, name, category, imageUrl, price, quantity) => {
+    dispatch(added(id, name, category, imageUrl, price, quantity));
+  };
+
   return (
     <div className="lws-productCard">
-      <img
-        className="lws-productImage"
-        src="https://i.dummyjson.com/data/products/59/thumbnail.jpg"
-        alt="product"
-      />
+      <img className="lws-productImage" src={imageUrl} alt="product" />
       <div className="p-4 space-y-2">
-        <h4 className="lws-productName">Spring and summershoes</h4>
-        <p className="lws-productCategory">Mens shoes</p>
+        <h4 className="lws-productName">{name}</h4>
+        <p className="lws-productCategory">{category}</p>
         <div className="flex items-center justify-between pb-2">
           <p className="productPrice">
-            BDT <span className="lws-price">400</span>
+            BDT <span className="lws-price">{price}</span>
           </p>
           <p className="productQuantity">
-            QTY <span className="lws-quantity">10</span>
+            QTY <span className="lws-quantity">{quantity}</span>
           </p>
         </div>
-        <button className="lws-btnAddToCart">Add To Cart</button>
+        <button
+          className="lws-btnAddToCart"
+          onClick={() =>
+            handleAdd(id, name, category, imageUrl, price, quantity)
+          }
+        >
+          Add To Cart
+        </button>
       </div>
     </div>
   );
