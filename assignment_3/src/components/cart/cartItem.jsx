@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { add, sub, deleted } from "../../redux/cart/actions";
-import { productAdd, productSub } from "../../redux/product/actions";
+import {
+  productAdd,
+  productSub,
+  productAddAfterDelete,
+} from "../../redux/product/actions";
 
 const CartItem = (cart) => {
   const { id, name, category, imageUrl, price, quantity, total } = cart.cart;
@@ -28,8 +32,9 @@ const CartItem = (cart) => {
     }
   };
 
-  const handleDeleted = (id) => {
+  const handleDeleted = (id, quantity) => {
     dispatch(deleted(id));
+    dispatch(productAddAfterDelete(id, quantity));
   };
 
   return (
@@ -69,7 +74,7 @@ const CartItem = (cart) => {
           <div className="flex items-center justify-center col-span-2 mt-4 md:justify-end md:mt-0">
             <button
               className="lws-removeFromCart"
-              onClick={() => handleDeleted(id)}
+              onClick={() => handleDeleted(id, quantity)}
             >
               <i className="text-lg text-red-400 fa-solid fa-trash"></i>
             </button>

@@ -1,4 +1,9 @@
-import { PRODUCTADDED, PRODUCTADD, PRODUCTSUB } from "./actionType";
+import {
+  PRODUCTADDED,
+  PRODUCTADD,
+  PRODUCTSUB,
+  ADDAFTERDELETE,
+} from "./actionType";
 
 const productAdded = (productName, category, imgUrl, price, quantity) => {
   return {
@@ -27,4 +32,14 @@ const productSub = (id) => {
   };
 };
 
-export { productAdded, productAdd, productSub };
+const productAddAfterDelete = (id, quantity) => {
+  return {
+    type: ADDAFTERDELETE,
+    payload: {
+      id: id,
+      quantity: quantity,
+    },
+  };
+};
+
+export { productAdded, productAdd, productSub, productAddAfterDelete };

@@ -7,10 +7,8 @@ const ProductItem = (product) => {
   const dispatch = useDispatch();
 
   const handleAdd = (id, name, category, imageUrl, price, quantity) => {
-    if (quantity > 0) {
-      dispatch(added(id, name, category, imageUrl, price, quantity));
-      dispatch(productSub(id));
-    }
+    dispatch(added(id, name, category, imageUrl, price, quantity));
+    dispatch(productSub(id));
   };
 
   return (
@@ -32,6 +30,7 @@ const ProductItem = (product) => {
           onClick={() =>
             handleAdd(id, name, category, imageUrl, price, quantity)
           }
+          disabled={!quantity}
         >
           Add To Cart
         </button>

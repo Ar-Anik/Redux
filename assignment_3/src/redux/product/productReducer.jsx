@@ -1,4 +1,9 @@
-import { PRODUCTADDED, PRODUCTADD, PRODUCTSUB } from "./actionType";
+import {
+  PRODUCTADDED,
+  PRODUCTADD,
+  PRODUCTSUB,
+  ADDAFTERDELETE,
+} from "./actionType";
 import InitialState from "./initialState";
 
 const productReducer = (state = InitialState, action) => {
@@ -47,6 +52,21 @@ const productReducer = (state = InitialState, action) => {
       });
 
       return productsub;
+
+    case ADDAFTERDELETE:
+      const productAddAfterDelete = state.map((product) => {
+        if (product.id === action.payload.id) {
+          return {
+            ...product,
+            quantity:
+              Number(product.quantity) + Number(action.payload.quantity),
+          };
+        } else {
+          return product;
+        }
+      });
+
+      return productAddAfterDelete;
 
     default:
       return state;
