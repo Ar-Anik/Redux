@@ -7,14 +7,12 @@ const Footer = () => {
   const dispatch = useDispatch();
 
   const { status, colors } = filters;
-  console.log("Colors : ", colors);
 
   const handleStatus = (status) => {
     dispatch(statusChange(status));
   };
 
   const handleColor = (color) => {
-    console.log("Color : ", color);
     if (colors.includes(color)) dispatch(colorChange(color, "remove"));
     else dispatch(colorChange(color, "add"));
   };

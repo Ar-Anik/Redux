@@ -1,5 +1,6 @@
 import {
   ADDED,
+  LOADED,
   TOGGLED,
   COLORSELECTED,
   DELETED,
@@ -11,6 +12,13 @@ const added = (todoText) => {
   return {
     type: ADDED,
     payload: todoText,
+  };
+};
+
+const loaded = (todos) => {
+  return {
+    type: LOADED,
+    payload: todos,
   };
 };
 
@@ -50,4 +58,12 @@ const allcompleted = () => {
   };
 };
 
-export { added, toogled, colorSelected, deleted, clearcompleted, allcompleted };
+export {
+  added,
+  loaded,
+  toogled,
+  colorSelected,
+  deleted,
+  clearcompleted,
+  allcompleted,
+};

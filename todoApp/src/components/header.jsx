@@ -3,7 +3,8 @@ import plus from "../assets/images/plus.png";
 import tick from "../assets/images/double-tick.png";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { added, allcompleted, clearcompleted } from "../redux/todos/actions";
+import { allcompleted, clearcompleted } from "../redux/todos/actions";
+import addTodo from "../redux/todos/thunk/addTodo";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Header = () => {
 
   const handlerSubmit = (event) => {
     event.preventDefault();
-    dispatch(added(input));
+    dispatch(addTodo(input));
     setInput("");
   };
 
@@ -37,7 +38,8 @@ const Header = () => {
         <input
           type="text"
           placeholder="Type your todo"
-          onChange={(event) => handlerInput(event)}
+          value={input}
+          onChange={handlerInput}
           className="w-full text-lg px-4 py-1 border-none outline-none bg-gray-100 text-gray-500"
         />
         <button
