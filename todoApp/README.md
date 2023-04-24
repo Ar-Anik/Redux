@@ -1,6 +1,14 @@
+## First Go To lws-json-server Folder then run below command
+
+npm start ---> json-server run localhost:9000 port then
+
+## goto todoApp and run
+
+npm start
+
 ## Project Live
 
-https://flourishing-heliotrope-d2c563.netlify.app
+https://reduxtodoapp2.netlify.app/
 
 ## npm i redux react-redux
 
