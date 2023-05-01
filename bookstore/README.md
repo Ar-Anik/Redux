@@ -4,7 +4,7 @@
 
 ### Project Live at :
 
-redux-bookstore-project.netlify.app
+https://redux-bookstore-project.netlify.app
 
 ### npm i redux-devtools-extension
 
