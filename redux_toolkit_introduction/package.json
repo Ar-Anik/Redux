@@ -1,0 +1,19 @@
+{
+  "name": "redux_toolkit_introduction",
+  "version": "1.0.0",
+  "description": "redux_toolkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "node redux_toolkit_introduction"
+  },
+  "keywords": [
+    "npm",
+    "node"
+  ],
+  "author": "ar_anik",
+  "license": "ISC",
+  "dependencies": {
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1"
+  }
+}
