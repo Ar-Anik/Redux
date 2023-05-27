@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "name": "anik",
+      "it": "dit"
+    },
+    {
+      "id": 2,
+      "name": "oni",
+      "it": "talent pro"
+    },
+    {
+      "id": 3,
+      "name": "das",
+      "it": "nexttiv solution"
+    }
+  ]
+}
