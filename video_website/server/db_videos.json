@@ -104,6 +104,21 @@
       "tags": ["tailwind", "css", "ui"],
       "likes": 0,
       "unlikes": 0
+    },
+    {
+      "id": 8,
+      "title": "Anuv Jain - GUL (Studio)",
+      "description": "The seventh studio recorded single, written, sung and composed by #AnuvJain is here! #GUL 🌷 talks about how we all search for fairytales in our dusty, mystical books but these often don't come true - and that’s okay, we'll be okay, cause we have that spark, that jaadoogari within us! :D",
+      "author": "Anuv Jain",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AGIKgqNCFJ9xh-s7JhOWqp8gQrf8UuOZWe2xn8zdbBnC9w=s176-c-k-c0x00ffffff-no-rj",
+      "date": "May 10, 2022",
+      "duration": "3:44",
+      "views": "1.04M",
+      "link": "https://www.youtube.com/embed/SmaY7RfBgas",
+      "thumbnail": "https://i3.ytimg.com/vi/SmaY7RfBgas/maxresdefault.jpg",
+      "tags": ["javascript", "react", "Music"],
+      "likes": 0,
+      "unlikes": 0
     }
   ],
   "tags": [
