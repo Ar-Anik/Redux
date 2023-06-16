@@ -3,6 +3,7 @@ import searchIcon from "../../assets/search.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { searchSelected } from "../../features/filter/filterSlice";
 import { useMatch, useNavigate } from "react-router-dom";
+import { pageSelect } from "../../features/pagination/paginationSlice";
 
 const Search = () => {
   const { search } = useSelector((state) => state.filter);
@@ -12,11 +13,10 @@ const Search = () => {
 
   const match = useMatch("/");
 
-  console.log("match from search : ", match);
-
   const handleSearch = (event) => {
     event.preventDefault();
     dispatch(searchSelected(input));
+    dispatch(pageSelect(1));
 
     if (match === null) navigate("/");
   };

@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { tagSelected, tagremoved } from "../../features/filter/filterSlice";
+import { pageSelect } from "../../features/pagination/paginationSlice";
 
 const Tag = ({ title }) => {
   const { tags } = useSelector((state) => state.filter);
@@ -17,6 +18,7 @@ const Tag = ({ title }) => {
     } else {
       dispatch(tagremoved(title));
     }
+    dispatch(pageSelect(1));
   };
 
   return (

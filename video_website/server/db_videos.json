@@ -11,12 +11,34 @@
       "views": "1.1k",
       "link": "https://www.youtube-nocookie.com/embed/6O4s7v28nlw",
       "thumbnail": "https://i3.ytimg.com/vi/6O4s7v28nlw/maxresdefault.jpg",
-      "tags": ["javascript", "react", "tips"],
-      "likes": 0,
+      "tags": [
+        "javascript",
+        "react",
+        "tips"
+      ],
+      "likes": 1,
       "unlikes": 0
     },
     {
       "id": 2,
+      "title": "Abdul Hannan & Rovalio - Iraaday ",
+      "description": "Written and performed by Abdul Hannan Produced, Mixed and Mastered by Rovalio Video shot and edited by Abdul Hannan ",
+      "author": "Abdul Hannan & Rovalio",
+      "avatar": "https://yt3.googleusercontent.com/Ca_PXbkA3mkOchtcsyj-blV4-SOLKYG5zRHM3mwq20_1-n4SJ24_X3UbLxY1GOPnlriSm2StN6Y=s176-c-k-c0x00ffffff-no-rj",
+      "date": "18 Mar 2022",
+      "duration": "2:13",
+      "views": "2.8M",
+      "link": "https://www.youtube.com/embed/Qwm6BSGrOq0",
+      "thumbnail": "https://i3.ytimg.com/vi/Qwm6BSGrOq0/maxresdefault.jpg",
+      "tags": [
+        "hindi",
+        "music"
+      ],
+      "likes": 10,
+      "unlikes": 2
+    },
+    {
+      "id": 3,
       "title": "VS Code Snippets - Boost your productivity with User Snippets",
       "description": "আমরা যখন Visual Studio Code Editor এ কাজ করি তখন অহরহ ব্যবহৃত কোড ব্লক গুলো আমাদের কে বারবার টাইপ করতে হয় এবং সামগ্রিকভাবে চিন্তা করলে এরকম ছোট ছোট ম্যনুয়াল কাজ আমাদের productivity অনেকাংশেই কমিয়ে দেয়। VS Code এর বিল্ট ইন ইউজার স্নিপেট ফিচারের মাধ্যমে আমরা কমন কাজগুলো স্নিপেট আকারে সাজিয়ে রেখে দিতে পারি এবং শর্টকাট কমান্ডের মাধ্যমে বড় বড় কোড ব্লক গুলো নিয়ে আসতে পারি। এই ভিডিওতে আপনারা এটাই জানতে পারবেন যে কিভাবে আমরা Visual Studio Code Editor এ কাস্টম স্নিপেট লিখতে পারি।",
       "author": "Learn with Sumit",
@@ -26,12 +48,33 @@
       "views": "2.3k",
       "link": "https://www.youtube-nocookie.com/embed/N-U6AVcIPy4",
       "thumbnail": "https://i3.ytimg.com/vi/N-U6AVcIPy4/maxresdefault.jpg",
-      "tags": ["vscode", "tips"],
+      "tags": [
+        "vscode",
+        "tips"
+      ],
       "likes": 0,
       "unlikes": 0
     },
     {
-      "id": 3,
+      "id": 4,
+      "title": "Bhalobasha Baki | ভালোবাসা বাকি",
+      "description": "ভালোবাসা বাকি Composed by Popeye & Farman Mehdi Lyrics: Popeye Music produced: Talat Minhaz",
+      "author": "Popeye Bangladesh",
+      "avatar": "https://i.scdn.co/image/ab6761610000e5eb3feabc8d5492e175e8816464",
+      "date": "",
+      "duration": "5:11",
+      "views": "8.1M",
+      "link": "https://www.youtube.com/embed/6blAEcz2I6c",
+      "thumbnail": "https://i3.ytimg.com/vi/6blAEcz2I6c/maxresdefault.jpg",
+      "tags": [
+        "bangla",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 5,
       "title": "Tailwind CSS 3 tutorial - Upgrade to Tailwind 3 | Tailwind CSS Bangla Tutorial",
       "description": "Tailwind CSS v3.0 came with incredible performance gains, huge workflow improvements, and a seriously ridiculous number of new features. In this tutorial - I have tried to explain different new features of Tailwind CSS version 3, how to install tailwind css 3, how to upgrade from tailwind v2 to v3 etc.",
       "author": "Learn with Sumit",
@@ -41,12 +84,33 @@
       "views": "7.1k",
       "link": "https://www.youtube-nocookie.com/embed/4M7D3O2XX4o",
       "thumbnail": "https://i3.ytimg.com/vi/4M7D3O2XX4o/maxresdefault.jpg",
-      "tags": ["tailwind", "css"],
+      "tags": [
+        "tailwind",
+        "css"
+      ],
       "likes": 0,
       "unlikes": 0
     },
     {
-      "id": 4,
+      "id": 6,
+      "title": "Ritviz - Pran",
+      "description": "Here's the official music video for the 5th track from my album DEV! Performed by: Ritviz Composed by: Ritviz Produced by: Ritviz  Lyrics by: Anvita Bharti & Ritviz Mix & Mastered by: Ritviz",
+      "author": "Ritviz",
+      "avatar": "https://yt3.googleusercontent.com/nRVohC055zJT-jt3A6KrCP9z4guhDY4VklzuW7Z25eZrHFzGIq0f5BuDCLweUT6tPyQLAwqO=s176-c-k-c0x00ffffff-no-rj",
+      "date": "30 Jul 2021",
+      "duration": "5:20",
+      "views": "3:08M",
+      "link": "https://www.youtube.com/embed/SivCc33LxyA",
+      "thumbnail": "https://i3.ytimg.com/vi/SivCc33LxyA/maxresdefault.jpg",
+      "tags": [
+        "hindi",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 7,
       "title": "Debounce Function in JavaScript - JavaScript Job Interview question",
       "description": "In this video, I have explained about the debounce function in JavaScript. This is a common question interviewers ask at Job Interviews. If you watch this video carefully, you will understand what is debounce and how to handle it with custom debounce function.",
       "author": "Learn with Sumit",
@@ -56,12 +120,34 @@
       "views": "4.5k",
       "link": "https://www.youtube-nocookie.com/embed/dD9O8DnIBj4",
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
-      "tags": ["debounce", "javascript", "tips"],
+      "tags": [
+        "debounce",
+        "javascript",
+        "tips"
+      ],
       "likes": 0,
       "unlikes": 0
     },
     {
-      "id": 5,
+      "id": 8,
+      "title": "Kodom | Artwork Video",
+      "description": "তবু এভাবে সময় আমার কেটে যাবে তোমাকে ভেবে তোমায় নিয়ে স্বপ্নগুলো ভোর হলে যায় যে ভেঙে আকাশ মেঘে বৃষ্টি হয়ে স্বপ্নগুলো দেয় ভিজিয়ে তুমিও কি আমার সাথে ভিজবে পথে হাত জড়িয়ে? এক গুচ্ছ কদম হাতে ভিজতে চাই তোমার সাথে এক গুচ্ছ কদম হাতে ভিজতে চাই তোমার সাথে দেখি তোমাকে আছো দাঁড়িয়ে আনমনে নীল শাড়িতে হাজার ভিড়ে সব ছাড়িয়ে শুধু তুমি আমার চোখে পথের ধারে তোমার আশায় ভালোবাসার ধূসর আলোতে আছি দাঁড়িয়ে স্বপ্ন নিয়ে তোমার আকাশে সুর ঝরাতে এক গুচ্ছ কদম হাতে ভিজতে চাই তোমার সাথে এক গুচ্ছ কদম হাতে ভিজতে চাই তোমার সাথে",
+      "author": "Blue Jeans",
+      "avatar": "https://yt3.googleusercontent.com/NPosTsMfjz4xuJVN10pVRdafx8fx3_FnHv381V3lRNEWzOvNih1hchulNcXyvuRWm9HMdt8Vwg=s176-c-k-c0x00ffffff-no-rj",
+      "date": "25 Feb 2019",
+      "duration": "4:10",
+      "views": "22.01M",
+      "link": "https://www.youtube.com/embed/G8SKzENt8Is",
+      "thumbnail": "https://i3.ytimg.com/vi/G8SKzENt8Is/maxresdefault.jpg",
+      "tags": [
+        "bangla",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 9,
       "title": "SASS Tutorial in English - Overview of SASS",
       "description": "In this video, I have given a high level overview of popular CSS Pre-processor SASS which helps us managing our styles at scale. If you have a basic understanding of CSS & JavaScript, this 10 mins SASS Tutorial will help you getting started with SASS.",
       "author": "Learn with Sumit",
@@ -71,12 +157,34 @@
       "views": "10.2k",
       "link": "https://www.youtube-nocookie.com/embed/4tV1Mfi4fMA",
       "thumbnail": "https://i3.ytimg.com/vi/4tV1Mfi4fMA/maxresdefault.jpg",
-      "tags": ["sass", "css", "ui"],
+      "tags": [
+        "sass",
+        "css",
+        "ui"
+      ],
       "likes": 0,
       "unlikes": 0
     },
     {
-      "id": 6,
+      "id": 10,
+      "title": "Sochta Houn",
+      "description": "sochta houn ke woh kitne masoom thay by Nusrat Fateh Ali Khan sochta woh kitne masoom thay Nusrat qawali The Lyrics of Sochta Hoon Keh Woh Kitne Masoom Thay",
+      "author": "Ustad Nusrat Fateh Ali Khan",
+      "avatar": "https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Nusrat_Fateh_Ali_Khan_03_1987_Royal_Albert_Hall.jpg/220px-Nusrat_Fateh_Ali_Khan_03_1987_Royal_Albert_Hall.jpg",
+      "date": "31 Oct 2017",
+      "duration": "4:36",
+      "views": "20.5M",
+      "link": "https://www.youtube.com/embed/rtDw-_1Gh0Q",
+      "thumbnail": "https://i3.ytimg.com/vi/rtDw-_1Gh0Q/maxresdefault.jpg",
+      "tags": [
+        "hindi",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 11,
       "title": "React Router DOM v6 Bangla Tutorial - Breaking Changes - React Router 6 vs 5",
       "description": "In this React Router DOM v6 Bangla tutorial, you will learn how to install react router dom 6, what are the breaking changes in react router 6, difference between react router 6 vs 5, how to upgrade from react router v5 to react router v6. ",
       "author": "Learn with Sumit",
@@ -86,12 +194,34 @@
       "views": "12.8k",
       "link": "https://www.youtube-nocookie.com/embed/34tjWL9wi4g",
       "thumbnail": "https://i3.ytimg.com/vi/34tjWL9wi4g/maxresdefault.jpg",
-      "tags": ["react", "router", "javascript"],
+      "tags": [
+        "react",
+        "router",
+        "javascript"
+      ],
       "likes": 0,
       "unlikes": 0
     },
     {
-      "id": 7,
+      "id": 12,
+      "title": "Kya Mujhe Pyar Hai",
+      "description": "Kya Mujhe Pyar Hai Lyrics by Neelesh Misra from Evergreen Hits Of K.K.. Now, listen to all your favourite songs, along with the lyrics,",
+      "author": "KKR",
+      "avatar": "https://english.cdn.zeenews.com/sites/default/files/2022/06/01/1048928-whatsapp-image-2022-06-01-at-3.52.18-pm.jpeg",
+      "date": "13 Mar 2009",
+      "duration": "2:41",
+      "views": "1.4M",
+      "link": "https://www.youtube.com/embed/idy1E3NoYwc",
+      "thumbnail": "https://i3.ytimg.com/vi/Gg6NMU4ivXM/maxresdefault.jpg",
+      "tags": [
+        "hindi",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 13,
       "title": "Tailwind CSS Tutorial Bangla - Introduction to Tailwind CSS",
       "description": "Tailwind is a utility-first CSS framework to rapidly build modern websites without ever leaving your HTML. In this Tailwind CSS tutorial, I have given a short introduction and overview of Tailwind CSS in Bangla language. Also, I have explained, why Tailwind vs Bootstrap debate should be stopped as both are useful in their own ways.",
       "author": "Learn with Sumit",
@@ -101,12 +231,16 @@
       "views": "3.9k",
       "link": "https://www.youtube-nocookie.com/embed/smDa6hoxLKI",
       "thumbnail": "https://i3.ytimg.com/vi/smDa6hoxLKI/maxresdefault.jpg",
-      "tags": ["tailwind", "css", "ui"],
+      "tags": [
+        "tailwind",
+        "css",
+        "ui"
+      ],
       "likes": 0,
       "unlikes": 0
     },
     {
-      "id": 8,
+      "id": 14,
       "title": "Anuv Jain - GUL (Studio)",
       "description": "The seventh studio recorded single, written, sung and composed by #AnuvJain is here! #GUL 🌷 talks about how we all search for fairytales in our dusty, mystical books but these often don't come true - and that’s okay, we'll be okay, cause we have that spark, that jaadoogari within us! :D",
       "author": "Anuv Jain",
@@ -116,7 +250,100 @@
       "views": "1.04M",
       "link": "https://www.youtube.com/embed/SmaY7RfBgas",
       "thumbnail": "https://i3.ytimg.com/vi/SmaY7RfBgas/maxresdefault.jpg",
-      "tags": ["javascript", "react", "Music"],
+      "tags": [
+        "hindi",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 15,
+      "title": "BATMAN V SUPERMAN FIGHT [PART-1]",
+      "description": "Batman v Superman: Dawn of Justice - The Ultimate Edition Director: Zack Snyder Production Companies Warner Bros. (presents) (as Warner Bros. Pictures) Atlas Entertainment Cruel & Unusual Films DC Comics DC Entertainment RatPac-Dune Entertainment (in association with)",
+      "author": "Flashback FM",
+      "avatar": "https://yt3.googleusercontent.com/ytc/AGIKgqN6_hO-sjUMWmqcDrRqNKSzwA9Yfydl9hEHASkK6g=s176-c-k-c0x00ffffff-no-rj",
+      "date": "7 January 2016",
+      "duration": "3:54",
+      "views": "52M",
+      "link": "https://www.youtube.com/embed/X7SiuQxhAjg",
+      "thumbnail": "https://i3.ytimg.com/vi/X7SiuQxhAjg/maxresdefault.jpg",
+      "tags": [
+        "english",
+        "movie"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 16,
+      "title": "Baby Calm Down",
+      "description": "Music video by Rema, Selena Gomez performing Calm Down. © 2022 Mavin Records / Jonzing World. Super talented Nigerian artist, Rema known to blend Western influences with hip-hop and his sound Afrorave, a subgenre of Afrobeats with influences of Arabian and Indian music delivers the remix of his hit song, Calm Down. The song features an American songstress, Selena Gomez, who added flavour to the music",
+      "author": "Rema, Selena Gomez",
+      "avatar": "https://yt3.googleusercontent.com/lwPYJMKoTNR2hs_hrXRFcTy0aQteNHEJnGwyfp0cwvjhJVZW6HWa6CTm_Bf99Y71U2V_FZMZenQ=s176-c-k-c0x00ffffff-no-rj",
+      "date": "7 Sept 2022",
+      "duration": "3:44",
+      "views": "49.3M",
+      "link": "https://www.youtube.com/embed/WcIcVapfqXw",
+      "thumbnail": "https://i3.ytimg.com/vi/WcIcVapfqXw/maxresdefault.jpg",
+      "tags": [
+        "english",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 17,
+      "title": "Kodom Ali Mastan",
+      "description": "ওই হউরের পো তুই আমার নাম লইলি কেন | Bangla Movie Scene | Dipjol | Kodom Ali Mastan . This Bangla Movie Scene released by Binodon Box.",
+      "author": "Binodon Box",
+      "avatar": "https://i0.wp.com/www.memelate.com/wp-content/uploads/2022/04/tor-moroner-chulkani-uthche-blank-dipjol.png?fit=450%2C292&ssl=1",
+      "date": "5 June 2018",
+      "duration": "11:18",
+      "views": "2.3M",
+      "link": "https://www.youtube.com/embed/ERtuDHSNtI4",
+      "thumbnail": "https://i3.ytimg.com/vi/ERtuDHSNtI4/maxresdefault.jpg",
+      "tags": [
+        "bangla",
+        "movie"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 18,
+      "title": "Tory Lanez-LUV",
+      "description": "Daystar Shemuel Shua Peterson, known professionally as Tory Lanez, is a Canadian rapper, singer, songwriter, record producer, and convicted felon. He received initial recognition from the mixtape Conflicts of My Soul: The 416 Story, released in August 2013",
+      "author": "Tory Lanez",
+      "avatar": "https://e0.pxfuel.com/wallpapers/177/567/desktop-wallpaper-tory-lanez.jpg",
+      "date": "25 Jun 2016",
+      "duration": "3:59",
+      "views": "224M",
+      "link": "https://www.youtube.com/embed/P9rFeGAdX0A",
+      "thumbnail": "https://i3.ytimg.com/vi/P9rFeGAdX0A/maxresdefault.jpg",
+      "tags": [
+        "english",
+        "music"
+      ],
+      "likes": 0,
+      "unlikes": 0
+    },
+    {
+      "id": 19,
+      "title": "Singa mengaum | Kung Fu Hustle",
+      "description": "Stephen Chow (director and star of Shaolin Soccer) is at it again with his newest action-packed and comedic martial-arts adventure, KUNG FU HUSTLE. From wildly imaginative kung fu showdowns to dance sequences featuring tuxedoed mobsters, you've never seen action this outrageous and characters this zany",
+      "author": "Stephen Chow, Yuen Qiu, Yuen Wah",
+      "avatar": "https://chlotrudis.org/wp-content/uploads/2017/12/kungfu.jpeg",
+      "date": "28 Apr 2023",
+      "duration": "10:12",
+      "views": "4.20M",
+      "link": "https://www.youtube.com/embed/QR9knDz-e1E",
+      "thumbnail": "https://i3.ytimg.com/vi/QR9knDz-e1E/maxresdefault.jpg",
+      "tags": [
+        "english",
+        "movie"
+      ],
       "likes": 0,
       "unlikes": 0
     }
@@ -124,43 +351,51 @@
   "tags": [
     {
       "id": 1,
-      "title": "javascript"
+      "title": "Javascript"
     },
     {
       "id": 2,
-      "title": "react"
+      "title": "React"
     },
     {
       "id": 3,
-      "title": "tips"
+      "title": "Tips"
     },
     {
       "id": 4,
-      "title": "vscode"
+      "title": "Vscode"
     },
     {
       "id": 5,
-      "title": "tailwind"
+      "title": "Tailwind"
     },
     {
       "id": 6,
-      "title": "css"
+      "title": "CSS"
     },
     {
       "id": 7,
-      "title": "debounce"
+      "title": "Debounce"
     },
     {
       "id": 8,
-      "title": "sass"
+      "title": "SASS"
     },
     {
       "id": 9,
-      "title": "ui"
+      "title": "UI"
     },
     {
       "id": 10,
-      "title": "router"
+      "title": "Router"
+    },
+    {
+      "id": 11,
+      "title": "Music"
+    },
+    {
+      "id": 12,
+      "title": "Movie"
     }
   ]
 }

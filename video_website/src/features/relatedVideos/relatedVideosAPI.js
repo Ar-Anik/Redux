@@ -14,8 +14,6 @@ const getRelatedVideos = async (id = 0, tags = []) => {
 
   const response = await axios.get(`videos/?${queryParameter}`);
 
-  console.log("API Response : ", response);
-
   return response;
 };
 

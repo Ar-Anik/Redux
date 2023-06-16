@@ -6,11 +6,27 @@ import Message from "../../utils/message";
 
 const VideoGrid = () => {
   const dispatch = useDispatch();
-  const { isLoading, videos, isError, error } = useSelector(
+  let { isLoading, videos, isError, error } = useSelector(
     (state) => state.videos
   );
+  const { pageNumber } = useSelector((state) => state.pagination);
 
   const { tags, search } = useSelector((state) => state.filter);
+
+  let orginalVideoLength = videos?.length;
+
+  if (videos?.length) {
+    let end = pageNumber * 8;
+    let start = end - 8;
+
+    let newVideos = [];
+    for (var i = start; i < end; i++) {
+      if (videos?.length <= i) break;
+      newVideos.push(videos[i]);
+    }
+
+    videos = newVideos;
+  }
 
   useEffect(() => {
     dispatch(fetchVideos({ tags, search }));
@@ -20,6 +36,15 @@ const VideoGrid = () => {
 
   if (isLoading) content = <Message message={"Loading..."} />;
   else if (isError && error) content = <Message message={error} />;
+  else if (
+    !isLoading &&
+    !isError &&
+    !error &&
+    videos.length === 0 &&
+    orginalVideoLength > 0 &&
+    (tags?.length > 0 || search)
+  )
+    content = <Message message={"No results found"} />;
   else if (!isLoading && !isError && !error && videos.length === 0)
     content = <Message message={"Video Not Found."} />;
   else if (!isLoading && !isError && !error && videos.length > 0)
