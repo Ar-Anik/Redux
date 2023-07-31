@@ -10,7 +10,7 @@ const Blog = () => {
 
       <HomeIcon />
 
-      <section class="post-page-container">
+      <section className="post-page-container">
         <BlogDetail />
         <RelatedBlog />
       </section>

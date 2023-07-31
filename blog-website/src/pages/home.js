@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <Navbar />
 
-      <section class="wrapper">
+      <section className="wrapper">
         <Filter />
         <Blogs />
       </section>

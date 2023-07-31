@@ -7,7 +7,7 @@
       "image": "https://crowdbotics.ghost.io/content/images/2019/05/MERN.png",
       "tags": ["javascript", "nodejs", "react"],
       "likes": 8,
-      "isSaved": false,
+      "isSaved": true,
       "createdAt": "2020-07-15"
     },
     {
@@ -47,7 +47,7 @@
       "image": "https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/1afab632ce21854f5a7dd1011d855e43",
       "tags": ["react", "javascript", "testing", "programming"],
       "likes": 88,
-      "isSaved": false,
+      "isSaved": true,
       "createdAt": "2023-01-13"
     },
     {
@@ -77,7 +77,7 @@
       "image": "https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/ce3dfe8efbd75e276466ebf82d0143f7",
       "tags": ["express", "nodejs", "javascript"],
       "likes": 24,
-      "isSaved": false,
+      "isSaved": true,
       "createdAt": "2022-11-13"
     }
   ]

@@ -1,30 +1,33 @@
-import gitCard from "../../images/git.webp";
+const BlogCard = ({ blog }) => {
+  const { title, image, tags, likes, isSaved, createdAt } = blog;
 
-const BlogCard = () => {
+  let saved = isSaved ? <span className="lws-badge">saved</span> : "";
+
+  let allTag = [];
+  if (tags?.length > 0) {
+    allTag = tags.map(
+      (tag, index) => `#${tag}${index === tags.length - 1 ? "" : ","} `
+    );
+  }
+
   return (
-    <div class="lws-card">
+    <div className="lws-card">
       <a href="post.html">
-        <img src={gitCard} class="lws-card-image" alt="" />
+        <img src={image} className="lws-card-image" alt="" />
       </a>
-      <div class="p-4">
-        <div class="lws-card-header">
-          <p class="lws-publishedDate">2023-05-01</p>
-          <p class="lws-likeCount">
-            <i class="fa-regular fa-thumbs-up"></i>100
+      <div className="p-4">
+        <div className="lws-card-header">
+          <p className="lws-publishedDate">{createdAt}</p>
+          <p className="lws-likeCount">
+            <i className="fa-regular fa-thumbs-up"></i>
+            {likes}
           </p>
         </div>
-        <a href="post.html" class="lws-postTitle">
-          {" "}
-          Top Github Alternatives{" "}
+        <a href="post.html" className="lws-postTitle">
+          {title}
         </a>
-        <div class="lws-tags">
-          <span>#python,</span> <span>#tech,</span> <span>#git</span>
-        </div>
-        {/* <!-- Show this element if post is saved --> */}
-        <div class="flex gap-2 mt-4">
-          <span class="lws-badge"> Saved </span>
-        </div>
-        {/* <!-- Show this element if post is saved Ends --> */}
+        <div className="lws-tags">{allTag}</div>
+        <div className="flex gap-2 mt-4">{saved}</div>
       </div>
     </div>
   );

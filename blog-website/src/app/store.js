@@ -1,5 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import blogsReducer from "../features/blogsSlice/blogSlice";
+import filterReducer from "../features/filterSlice/filterSlice";
 
-export const store = configureStore({
-  reducer: {},
+const store = configureStore({
+  reducer: {
+    blogs: blogsReducer,
+    filters: filterReducer,
+  },
 });
+
+export default store;
