@@ -1,12 +1,14 @@
 import blogLogo from "../images/LWSBlog.svg";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="py-4 border-b">
       <div className="navbar-container">
         <div className="logo">
-          <a href="index.html">
+          <Link to="/">
             <img src={blogLogo} alt="search" />
-          </a>
+          </Link>
         </div>
         <div className="auth-buttons">
           <button className="btn btn-primary">sign in</button>
