@@ -1,19 +1,29 @@
-import aiimage from "../../images/ai.jpg";
+import { Link } from "react-router-dom";
 
-const RelatedBlogCard = () => {
+const RelatedBlogCard = ({ blog }) => {
+  const { id, title, image, tags, createdAt } = blog;
+
+  let allTag = [];
+  if (tags?.length > 0) {
+    allTag = tags.map(
+      (tag, index) => `#${tag}${index === tags.length - 1 ? "" : ","} `
+    );
+  }
+
   return (
     <div className="card">
-      <a href="post.html">
-        <img src={aiimage} className="card-image" alt="" />
-      </a>
+      <Link to={`/blogs/${id}`}>
+        <img src={image} className="card-image" alt="" />
+      </Link>
       <div className="p-4">
-        <a href="post.html" className="text-lg post-title lws-RelatedPostTitle">
-          The future of Artificial Inteligence
-        </a>
-        <div className="mb-0 tags">
-          <span>#python,</span> <span>#tech,</span> <span>#git</span>
-        </div>
-        <p>2020-07-15</p>
+        <Link
+          to={`/blogs/${id}`}
+          className="text-lg post-title lws-RelatedPostTitle"
+        >
+          {title}
+        </Link>
+        <div className="mb-0 tags">{allTag}</div>
+        <p>{createdAt}</p>
       </div>
     </div>
   );

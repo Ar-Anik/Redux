@@ -24,8 +24,8 @@
         "nodejs",
         "react"
       ],
-      "likes": 16,
-      "isSaved": false,
+      "likes": 17,
+      "isSaved": true,
       "createdAt": "2022-07-15"
     },
     {
@@ -96,7 +96,7 @@
         "Algo"
       ],
       "likes": 184,
-      "isSaved": false,
+      "isSaved": true,
       "createdAt": "2023-01-13"
     },
     {
