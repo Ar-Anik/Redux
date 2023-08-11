@@ -7,3 +7,13 @@
 ## npm i axios
 
 ## npm run build
+
+## Project Live at : https://aranik-redux-blog-app.netlify.app/
+
+## First Download This Repository
+
+## ----> Goto Server file
+
+## ----> Run Command : npm start
+
+## GoBack Main Folder Then Run Command : npm start
