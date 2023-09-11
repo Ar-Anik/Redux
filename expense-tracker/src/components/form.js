@@ -1,19 +1,61 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  postTransaction,
+  patchTransaction,
+  removeEditingObject,
+} from "../features/transactions/transactionSlice";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [amount, setAmount] = useState("");
 
+  const dispatch = useDispatch();
+  const editingObject = useSelector((state) => state.transaction.editingObject);
+
+  useEffect(() => {
+    if (editingObject.id) {
+      setName(editingObject.name);
+      setType(editingObject.type);
+      setAmount(editingObject.amount);
+    } else {
+      reset();
+    }
+  }, [editingObject]);
+
+  const reset = () => {
+    setName("");
+    setType("");
+    setAmount("");
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
-    console.log("Nice");
+    dispatch(
+      postTransaction({
+        name,
+        type,
+        amount: Number(amount),
+      })
+    ).then(() => reset());
+  };
+
+  const handleEditing = () => {
+    const editId = editingObject?.id;
+    const data = {
+      name,
+      type,
+      amount,
+    };
+    dispatch(patchTransaction({ editId, data })).then(() => {
+      dispatch(removeEditingObject()).then(() => reset());
+    });
   };
 
   return (
     <div className="form">
-      <h3>Add new transaction</h3>
+      <h3>Add New Transaction</h3>
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -21,8 +63,9 @@ const Form = () => {
           <input
             type="text"
             name="transaction_name"
+            required
             value={name}
-            placeholder="My Salary"
+            placeholder="Income or Expense Name"
             onChange={(event) => setName(event.target.value)}
           />
         </div>
@@ -33,6 +76,7 @@ const Form = () => {
             <input
               type="radio"
               value="income"
+              required
               name="transaction_type"
               checked={type === "income"}
               onChange={() => setType("income")}
@@ -44,7 +88,6 @@ const Form = () => {
               type="radio"
               value="expense"
               name="transaction_type"
-              placeholder="Expense"
               checked={type === "expense"}
               onChange={() => setType("expense")}
             />
@@ -57,15 +100,23 @@ const Form = () => {
           <input
             type="number"
             value={amount}
-            placeholder="300"
+            required
+            placeholder="Enter Amount"
             name="transaction_amount"
             onChange={(event) => setAmount(event.target.value)}
           />
         </div>
 
-        <button className="btn">Add Transaction</button>
+        {!editingObject && <button className="btn">Add Transaction</button>}
       </form>
-      <button className="btn cancel_edit">Cancel Edit</button>
+      {editingObject && (
+        <button className="btn" onClick={handleEditing}>
+          Update Transaction
+        </button>
+      )}
+      {editingObject && (
+        <button className="btn cancel_edit">Cancel Edit</button>
+      )}
     </div>
   );
 };

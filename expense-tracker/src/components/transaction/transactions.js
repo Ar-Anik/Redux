@@ -1,13 +1,29 @@
 import editImage from "../images/edit.svg";
 import deleteImage from "../images/delete.svg";
+import { addEditingObject } from "../../features/transactions/transactionSlice";
+import { useDispatch } from "react-redux";
 
-const Transactions = () => {
+const Transaction = ({ transaction }) => {
+  const { id, name, type, amount } = transaction;
+  const dispatch = useDispatch();
+
+  const handleEditing = () => {
+    dispatch(
+      addEditingObject({
+        id,
+        name,
+        type,
+        amount,
+      })
+    );
+  };
+
   return (
     <li className="transaction income">
-      <p>Earned this month</p>
+      <p>{name}</p>
       <div className="right">
-        <p>৳ 100</p>
-        <button className="link">
+        <p>৳ {amount}</p>
+        <button className="link" onClick={handleEditing}>
           <img className="icon" src={editImage} alt="Edit" />
         </button>
         <button className="link">
@@ -18,4 +34,4 @@ const Transactions = () => {
   );
 };
 
-export default Transactions;
+export default Transaction;

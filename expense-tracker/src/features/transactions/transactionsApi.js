@@ -12,8 +12,8 @@ const addTransactions = async (data) => {
   return response.data;
 };
 
-const editTransactions = async (id, data) => {
-  const response = await axios.put(`transactions/${id}`, data);
+const editTransactions = async (editId, data) => {
+  const response = await axios.put(`transactions/${editId}`, data);
 
   return response.data;
 };
