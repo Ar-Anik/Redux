@@ -10,17 +10,22 @@ const Form = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [amount, setAmount] = useState("");
+  const [modify, setModify] = useState(false);
 
   const dispatch = useDispatch();
-  const editingObject = useSelector((state) => state.transaction.editingObject);
+  const { isLoading, isError, editingObject } = useSelector(
+    (state) => state.transaction
+  );
 
   useEffect(() => {
     if (editingObject.id) {
+      setModify(true);
       setName(editingObject.name);
       setType(editingObject.type);
       setAmount(editingObject.amount);
     } else {
       reset();
+      setModify(false);
     }
   }, [editingObject]);
 
@@ -41,7 +46,8 @@ const Form = () => {
     ).then(() => reset());
   };
 
-  const handleEditing = () => {
+  const handleEditing = (event) => {
+    event.preventDefault();
     const editId = editingObject?.id;
     const data = {
       name,
@@ -49,15 +55,21 @@ const Form = () => {
       amount,
     };
     dispatch(patchTransaction({ editId, data })).then(() => {
-      dispatch(removeEditingObject()).then(() => reset());
+      dispatch(removeEditingObject());
     });
+    reset();
+  };
+
+  const handleCancelEditing = () => {
+    dispatch(removeEditingObject());
+    reset();
   };
 
   return (
     <div className="form">
       <h3>Add New Transaction</h3>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={modify ? handleEditing : handleSubmit}>
         <div className="form-group">
           <label htmlFor="transaction_name">Name</label>
           <input
@@ -107,15 +119,16 @@ const Form = () => {
           />
         </div>
 
-        {!editingObject && <button className="btn">Add Transaction</button>}
-      </form>
-      {editingObject && (
-        <button className="btn" onClick={handleEditing}>
-          Update Transaction
+        <button className="btn" type="submit" disabled={isLoading}>
+          {modify ? "Update Transaction" : "Add Transaction"}
         </button>
-      )}
-      {editingObject && (
-        <button className="btn cancel_edit">Cancel Edit</button>
+
+        {!isLoading && isError && <p>There was an error occure</p>}
+      </form>
+      {modify && (
+        <button className="btn cancel_edit" onClick={handleCancelEditing}>
+          Cancel Edit
+        </button>
       )}
     </div>
   );

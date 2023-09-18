@@ -3,19 +3,19 @@
     {
       "name": "Income from wife house",
       "type": "income",
-      "amount": "30000",
+      "amount": 5000,
       "id": 1
     },
     {
       "name": "Salary From Office",
       "type": "income",
-      "amount": 5000,
+      "amount": 25000,
       "id": 2
     },
     {
       "name": "Home Rent",
       "type": "expense",
-      "amount": 3000,
+      "amount": 5000,
       "id": 3
     }
   ]
