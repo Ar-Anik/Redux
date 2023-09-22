@@ -11,6 +11,7 @@ const Form = () => {
   const [type, setType] = useState("");
   const [amount, setAmount] = useState("");
   const [modify, setModify] = useState(false);
+  const [showMessage, setShowMessage] = useState("");
 
   const dispatch = useDispatch();
   const { isLoading, isError, editingObject } = useSelector(
@@ -43,25 +44,48 @@ const Form = () => {
         type,
         amount: Number(amount),
       })
-    ).then(() => reset());
+    )
+      .then(() => reset())
+      .catch(() => {
+        setShowMessage("There was an error occure");
+
+        setTimeout(() => {
+          setShowMessage("");
+        }, 5000);
+      });
   };
 
   const handleEditing = (event) => {
     event.preventDefault();
+    debugger;
     const editId = editingObject?.id;
     const data = {
       name,
       type,
       amount,
     };
-    dispatch(patchTransaction({ editId, data })).then(() => {
-      dispatch(removeEditingObject());
-    });
+    dispatch(patchTransaction({ editId, data }))
+      .then(() => {
+        dispatch(removeEditingObject());
+      })
+      .catch(() => {
+        setShowMessage("There was an error occure");
+        setTimeout(() => {
+          setShowMessage("");
+        }, 5000);
+      });
     reset();
   };
 
   const handleCancelEditing = () => {
-    dispatch(removeEditingObject());
+    dispatch(removeEditingObject())
+      .then()
+      .catch(() => {
+        setShowMessage("There was an error occure");
+        setTimeout(() => {
+          setShowMessage("");
+        }, 5000);
+      });
     reset();
   };
 
@@ -123,7 +147,7 @@ const Form = () => {
           {modify ? "Update Transaction" : "Add Transaction"}
         </button>
 
-        {!isLoading && isError && <p>There was an error occure</p>}
+        {!isLoading && isError && <p>{showMessage}</p>}
       </form>
       {modify && (
         <button className="btn cancel_edit" onClick={handleCancelEditing}>
