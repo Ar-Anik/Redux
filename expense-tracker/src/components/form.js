@@ -44,48 +44,55 @@ const Form = () => {
         type,
         amount: Number(amount),
       })
-    )
-      .then(() => reset())
-      .catch(() => {
+    ).then((action) => {
+      reset();
+
+      if (postTransaction.rejected.match(action)) {
         setShowMessage("There was an error occure");
 
         setTimeout(() => {
           setShowMessage("");
         }, 5000);
-      });
+      }
+    });
+    // .catch(() => {
+    //   setShowMessage("There was an error occure");
+
+    //   setTimeout(() => {
+    //     setShowMessage("");
+    //   }, 5000);
+    // });
   };
 
   const handleEditing = (event) => {
     event.preventDefault();
-    debugger;
     const editId = editingObject?.id;
     const data = {
       name,
       type,
       amount,
     };
-    dispatch(patchTransaction({ editId, data }))
-      .then(() => {
-        dispatch(removeEditingObject());
-      })
-      .catch(() => {
+    dispatch(patchTransaction({ editId, data })).then((action) => {
+      dispatch(removeEditingObject());
+      if (patchTransaction.rejected.match(action)) {
         setShowMessage("There was an error occure");
         setTimeout(() => {
           setShowMessage("");
         }, 5000);
-      });
+      }
+    });
+    // .catch(() => {
+    //   setShowMessage("There was an error occure");
+    //   setTimeout(() => {
+    //     setShowMessage("");
+    //   }, 5000);
+    // });
+
     reset();
   };
 
   const handleCancelEditing = () => {
-    dispatch(removeEditingObject())
-      .then()
-      .catch(() => {
-        setShowMessage("There was an error occure");
-        setTimeout(() => {
-          setShowMessage("");
-        }, 5000);
-      });
+    dispatch(removeEditingObject());
     reset();
   };
 
@@ -147,7 +154,7 @@ const Form = () => {
           {modify ? "Update Transaction" : "Add Transaction"}
         </button>
 
-        {!isLoading && isError && <p>{showMessage}</p>}
+        {isError && <p style={{ color: "red" }}>{showMessage}</p>}
       </form>
       {modify && (
         <button className="btn cancel_edit" onClick={handleCancelEditing}>
