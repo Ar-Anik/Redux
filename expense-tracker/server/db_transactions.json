@@ -17,6 +17,12 @@
       "type": "expense",
       "amount": 5000,
       "id": 3
+    },
+    {
+      "name": "Food Cost",
+      "type": "expense",
+      "amount": 3000,
+      "id": 4
     }
   ]
 }

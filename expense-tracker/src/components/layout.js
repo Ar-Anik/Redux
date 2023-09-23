@@ -1,9 +1,8 @@
+import Navbar from "./header";
 const Layout = ({ children }) => {
   return (
     <div className="App">
-      <div className="header">
-        <h1>Expense Tracker</h1>
-      </div>
+      <Navbar />
 
       <div className="main">
         <div className="container">{children}</div>

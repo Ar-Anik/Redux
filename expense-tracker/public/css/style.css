@@ -182,11 +182,58 @@ label {
 }
 
 .conatiner_of_list_of_transactions ul {
-  max-height: 500px;
+  max-height: 380px;
   overflow-y: auto;
 }
 
-@media (max-width: 450px) {
+/* Style the navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Spacing between the logo and the navbar */
+  align-items: center; /* Vertically center items */
+  padding: 20px;
+  background-color: #4338ca;
+  color: whitesmoke;
+}
+
+/* Style the logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 271px;
+}
+
+/* Style the navbar list */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox for navbar items */
+}
+
+/* Style the navbar list items */
+.navbar li {
+  margin: 0 10px; /* Add spacing between list items */
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Style the navbar links */
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Style the navbar links on hover */
+.navbar li a:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 786px) {
   .top_card,
   .form {
     min-width: 90%;
@@ -207,6 +254,8 @@ label {
 
   .conatiner_of_list_of_transactions {
     width: 90vw;
+    max-height: 380px;
+    overflow-y: auto;
   }
 
   ul {
@@ -218,6 +267,31 @@ label {
   .transaction {
     width: 90%;
     margin: 10px auto;
+  }
+
+  .navbar-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px; /* Reduce padding for a more compact layout */
+  }
+
+  .logo {
+    margin: 0; /* Remove margin */
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .navbar li {
+    margin: 5px 0; /* Add vertical margin between list items */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .navbar li a {
+    padding: 8px; /* Adjust padding for smaller screens */
   }
 
   * {
